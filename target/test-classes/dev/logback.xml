@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE RelativeLayout>
+<configuration debug="true" scan="false" scanPeriod="2 seconds">
+
+	<property resource="logback.properties" />
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<pattern>${logger.pattern}</pattern>
+			<charset>${logger.charset}</charset>
+		</encoder>
+	</appender>
+
+	<logger name="com.rr" level="INFO" />
+	<logger name="com.rr.sys.filter.RRCommonsRequestLoggingFilter" level="DEBUG" />
+	<logger name="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" level="INFO" />
+	<logger name="org.apache.http.headers" level="DEBUG" />
+	<logger name="org.apache.http.wire" level="DEBUG" />
+	<logger name="org.springframework.web.client.RestTemplate" level="DEBUG" />
+	<logger name="org.springframework.security.oauth2.client.OAuth2RestTemplate" level="DEBUG" />
+	<logger name="org.apache.http.wire" level="DEBUG" />
+
+	<root level="INFO">
+		<appender-ref ref="STDOUT" />
+	</root>
+
+</configuration>
