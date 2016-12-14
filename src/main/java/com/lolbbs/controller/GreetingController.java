@@ -25,6 +25,7 @@ public class GreetingController {
 
     @RequestMapping("/name")
     public  String getss() {
+    	String sss = "ss";
         return this.name;
     }
 }
